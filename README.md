@@ -17,7 +17,7 @@
 
 
 ## Выполнение
-*Dockerfile* для выполнения задания находится в каталоге [1-nginx](https://github.com/nikitinya89/otus_hw13_docker/tree/main/1-nginx).
+**Dockerfile** для выполнения задания находится в каталоге [1-nginx](https://github.com/nikitinya89/otus_hw13_docker/tree/main/1-nginx).
 
 Сборка образа:
 ```bash
@@ -36,3 +36,11 @@ https://hub.docker.com/r/nikitinya89/otus_hw13/tags
 ```bash
 docker pull nikitinya89/otus_hw13:latest
 ```
+
+### Задание со звездочкой
+
+В каталоге [2-redmine](https://github.com/nikitinya89/otus_hw13_docker/tree/main/2-redmine) находится **docker-compose.yml** для выполнения задания.
+В результате выполнения команды `docker compose up` получим два запущенных контейнера: *redmine* и *mysql*.
+- В *redmine* добавлена кастомная тема оформления *Blueclair*, доступная для выбора из веб-интерфейса
+- На хост проброшен порт *3306* для *mysql*, а также на порт *8080* проброшен *3000* порт *redmine* для доступа к веб-интерфейсу
+- Настроены *Volume*'ы для сохранения каталогов */var/lib/mysql* контейнера *mysql* и */usr/src/redmine/files* контейнера *redmine*
